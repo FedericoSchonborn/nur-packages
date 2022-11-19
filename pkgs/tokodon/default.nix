@@ -15,15 +15,15 @@
   wrapQtAppsHook,
   ...
 }:
-stdenv.mkDerivation {
+stdenv.mkDerivation rec {
   pname = "tokodon";
   version = "22.09";
 
   src = fetchFromGitLab {
     domain = "invent.kde.org";
     owner = "network";
-    repo = "tokodon";
-    rev = "v22.09";
+    repo = pname;
+    rev = "v${version}";
     sha256 = "wHE8HPnjXd+5UG5WEMd7+m1hu2G3XHq/eVQNznvS/zc=";
   };
 
