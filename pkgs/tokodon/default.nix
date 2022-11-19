@@ -1,32 +1,47 @@
-{stdenv, fetchFromGitLab, cmake, extra-cmake-modules, kdbusaddons, kitemmodels, knotifications, kwindowsystem, qqc2-desktop-style, qtkeychain, qtmultimedia, qtquickcontrols2, qtwebsockets, wrapQtAppsHook, ...}:
-
+{
+  stdenv,
+  fetchFromGitLab,
+  cmake,
+  extra-cmake-modules,
+  kdbusaddons,
+  kitemmodels,
+  knotifications,
+  kwindowsystem,
+  qqc2-desktop-style,
+  qtkeychain,
+  qtmultimedia,
+  qtquickcontrols2,
+  qtwebsockets,
+  wrapQtAppsHook,
+  ...
+}:
 stdenv.mkDerivation {
   pname = "tokodon";
-  version = "unstable-2022-11-19";
+  version = "22.09";
 
   src = fetchFromGitLab {
     domain = "invent.kde.org";
     owner = "network";
     repo = "tokodon";
-    rev ="737b6c1f8f5cf2c6b13440cebb831976b965d167";
-    sha256 = "G6Kh+YUOXGPB0GuwXtlZwbeyyKIkua/8MZQkIvWq1d0=";
+    rev = "v22.09";
+    sha256 = "wHE8HPnjXd+5UG5WEMd7+m1hu2G3XHq/eVQNznvS/zc=";
   };
 
   nativeBuildInputs = [
-  cmake
-  extra-cmake-modules
+    cmake
+    extra-cmake-modules
     wrapQtAppsHook
   ];
 
   buildInputs = [
-  kdbusaddons
-  kitemmodels
-  knotifications
-  kwindowsystem
-  qqc2-desktop-style
-  qtkeychain
-  qtmultimedia
-  qtquickcontrols2
-  qtwebsockets
+    kdbusaddons
+    kitemmodels
+    knotifications
+    kwindowsystem
+    qqc2-desktop-style
+    qtkeychain
+    qtmultimedia
+    qtquickcontrols2
+    qtwebsockets
   ];
 }
