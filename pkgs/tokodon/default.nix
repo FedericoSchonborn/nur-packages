@@ -1,4 +1,5 @@
 {
+  lib,
   stdenv,
   fetchFromGitLab,
   cmake,
@@ -44,4 +45,13 @@ stdenv.mkDerivation rec {
     qtquickcontrols2
     qtwebsockets
   ];
+
+  meta = with lib; {
+    description = "Mastodon client for Plasma and Plasma Mobile";
+    longDescription = ''
+      Mastodon client for Plasma and Plasma Mobile.
+    '';
+    homepage = "https://invent.kde.org/network/tokodon";
+    license = with licenses; [gpl3Only cc-by-40];
+  };
 }
