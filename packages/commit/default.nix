@@ -78,5 +78,6 @@ stdenv.mkDerivation rec {
     downloadPage = "https://github.com/sonnyp/Commit/releases";
     license = licenses.gpl3Plus;
     mainProgram = "re.sonny.Commit";
+    platforms = platforms.all;
   };
 }

@@ -55,5 +55,6 @@ stdenv.mkDerivation rec {
     '';
     homepage = "https://apps.kde.org/tokodon/";
     license = with licenses; [gpl3Only cc-by-40];
+    platforms = platforms.all;
   };
 }

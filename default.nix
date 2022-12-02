@@ -13,6 +13,7 @@
 
   kirigami-addons = pkgs.libsForQt5.callPackage ./packages/kirigami-addons {};
 
+  cargo-aoc = pkgs.callPackage ./packages/cargo-aoc {};
   commit = pkgs.callPackage ./packages/commit {};
   gitklient = pkgs.libsForQt5.callPackage ./packages/gitklient {};
   liquidshell = pkgs.libsForQt5.callPackage ./packages/liquidshell {};
